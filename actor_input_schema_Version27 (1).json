@@ -1,0 +1,42 @@
+{
+  "title": "Input schema of the Tech Stack Monitor scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "Seed URLs to start crawling from (site homepages, directories).",
+      "editor": "requestListSources",
+      "prefill": [
+        {
+          "url": "https://example.com"
+        }
+      ]
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max Requests per Crawl",
+      "type": "integer",
+      "description": "Maximum number of requests that can be made by this crawler.",
+      "default": 200
+    },
+    "followInternalOnly": {
+      "title": "Follow internal links only",
+      "type": "boolean",
+      "description": "If true, only follow links within the same host as each start URL.",
+      "default": true
+    },
+    "detectCdnsAndLibraries": {
+      "title": "Detect CDNs & libraries",
+      "type": "boolean",
+      "description": "If true, analyze script src hosts and link rel preconnect for CDN/library indicators.",
+      "default": true
+    },
+    "enqueueLinks": {
+      "title": "Enqueue links found on pages",
+      "type": "boolean",
+      "description": "If true, the Actor will enqueue internal links discovered on pages (site scan).",
+      "default": false
+    }
+  }
+}

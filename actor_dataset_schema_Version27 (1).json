@@ -1,0 +1,23 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": ["url", "title", "technologies", "cdns", "analytics", "server"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "url": { "label": "URL", "format": "link" },
+          "title": { "label": "Title", "format": "text" },
+          "technologies": { "label": "Technologies", "format": "text" },
+          "cdns": { "label": "CDNs / hosts", "format": "text" },
+          "analytics": { "label": "Analytics", "format": "text" },
+          "server": { "label": "Server / generator", "format": "text" }
+        }
+      }
+    }
+  }
+}
